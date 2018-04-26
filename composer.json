@@ -1,0 +1,29 @@
+{
+    "name": "dollyaswin/reactive-php",
+    "description": "Reactive Programming in PHP",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "keywords": ["php",  "reactive", "rxphp", "asynchronous"],
+    "homepage": "https://aqilix.com/",
+    "config": {
+        "process-timeout": 5000
+    },
+    "require": {
+        "php": "^7.0",
+        "reactivex/rxphp": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.5",
+        "squizlabs/php_codesniffer": "^2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "ReactiveExample\\": "src/"
+        }
+    },
+    "scripts": {
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "test": "phpunit"
+    }
+}

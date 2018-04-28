@@ -24,7 +24,6 @@ Observable::fromArray($fruits)
         if ($value[0] == 'o') {
             throw new \Exception("It's broken.");
         }
-
         return strlen($value);
     })
     ->filter(function ($len) {

@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ReactiveExample\\": "src/"
+            "RxExample\\": "src/"
         }
     },
     "scripts": {

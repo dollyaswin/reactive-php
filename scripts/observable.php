@@ -5,14 +5,13 @@ require_once __DIR__ . '/bootstrap.php';
 use Rx\Observer\CallbackObserver;
 use Rx\Observable;
 
-$fruits   = ['apple', 'banana', 'orange', 'raspberry'];
+$fruits   = ['grape', 'watermelon', 'pineaple', 'strawberry'];
 $observer = new CallbackObserver(
     function ($value) {
-        echo "Next: $value\n";
+        printf("Next: %d chars" . PHP_EOL, $value);
     },
     function (\Exception $err) {
-        $msg = $err->getMessage();
-        echo "Error: $msg\n";
+        printf("Error: %s chars" . PHP_EOL, $err->getMessage());
     },
     function () {
         echo "Complete\n";
@@ -21,9 +20,6 @@ $observer = new CallbackObserver(
 
 Observable::fromArray($fruits)
     ->map(function ($value) {
-        if ($value[0] == 'o') {
-            throw new \Exception("It's broken.");
-        }
         return strlen($value);
     })
     ->filter(function ($len) {

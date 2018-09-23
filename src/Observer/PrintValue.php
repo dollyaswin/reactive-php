@@ -10,7 +10,7 @@ class PrintValue extends \Rx\Observer\AbstractObserver
     }
     protected function next($item)
     {
-        printf("Next: %s" . PHP_EOL, $item);
+        printf("Next: %s chars" . PHP_EOL, $item);
     }
     protected function error(\Throwable $err)
     {

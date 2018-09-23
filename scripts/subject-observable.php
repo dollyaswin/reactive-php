@@ -2,7 +2,6 @@
 
 require_once __DIR__ . '/bootstrap.php';
 
-use Rx\Observable;
 use Rx\Subject\Subject;
 use RxExample\Observer\PrintValue;
 

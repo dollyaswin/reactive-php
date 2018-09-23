@@ -8,15 +8,15 @@ use RxExample\Observer\PrintValue;
 
 $fruits   = ['grape', 'watermelon', 'strawberry', 'pineaple'];
 $observer = new CallbackObserver(
-		function ($value) {
-			printf("Next: %d chars" . PHP_EOL, $value);
-		},
-		function (\Exception $err) {
-			printf("Error: %s" . PHP_EOL, $err->getMessage());
-		},
-		function () {
-			echo "Complete" . PHP_EOL;
-		}
+    function ($value) {
+            printf("Next: %d chars" . PHP_EOL, $value);
+    },
+    function (\Exception $err) {
+            printf("Error: %s" . PHP_EOL, $err->getMessage());
+    },
+    function () {
+            echo "Complete" . PHP_EOL;
+    }
 );
 
 Observable::fromArray($fruits)
@@ -27,5 +27,3 @@ Observable::fromArray($fruits)
         return $len > 5;
     })
     ->subscribe($observer);
-
-$loop->run();

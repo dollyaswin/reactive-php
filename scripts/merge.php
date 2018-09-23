@@ -31,5 +31,3 @@ Observable::fromArray($fruits)
     })
     ->merge(Observable::fromArray($vegetables))
     ->subscribe($observer);
-
-$loop->run();

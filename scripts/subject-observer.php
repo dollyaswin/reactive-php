@@ -16,4 +16,3 @@ Observable::fromArray($fruits)
           ->map(function ($value) {
                 return strlen($value);
           })->subscribe($subject);
-$loop->run();

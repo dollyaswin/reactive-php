@@ -6,7 +6,7 @@ $fruits = ['apple', 'banana', 'orange', 'raspberry'];
 $source = \Rx\Observable::fromArray($fruits);
 $source->subscribe(
     function ($x) {
-    	printf("Next: %s (%d chars)" . PHP_EOL, $x, strlen($x));
+        printf("Next: %s (%d chars)" . PHP_EOL, $x, strlen($x));
     },
     function (Exception $ex) {
         echo 'Error: ', $ex->getMessage(), PHP_EOL;
@@ -15,4 +15,3 @@ $source->subscribe(
         echo 'Completed', PHP_EOL;
     }
 );
-$loop->run();

@@ -15,4 +15,3 @@ $subject->onNext('grape');
 $subject->onNext('watermelon');
 $subject->onNext('strawberry');
 $subject->onNext('pineaple');
-$loop->run();

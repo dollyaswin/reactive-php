@@ -20,14 +20,12 @@ $observer = new CallbackObserver(
 
 Observable::fromArray($fruits)
     ->map(function ($value) {
-    	if (strpos($value, 'berry') !== false) {
-    		throw new \Exception('Fruits with *berry rejected!');
-    	}
+        if (strpos($value, 'berry') !== false) {
+            throw new \Exception('Fruits with *berry rejected!');
+        }
         return strlen($value);
     })
     ->filter(function ($len) {
         return $len > 5;
     })
     ->subscribe($observer);
-
-$loop->run();

@@ -32,5 +32,3 @@ $subject->onNext('apple');
 $subject->onNext('banana');
 $subject->onNext('orange');
 $subject->onNext('raspberry');
-
-$loop->run();

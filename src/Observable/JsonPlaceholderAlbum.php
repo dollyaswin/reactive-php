@@ -1,8 +1,6 @@
 <?php
 namespace RxExample\Observable;
 
-// use Rx\Observable\;
-// use Rx\ObserverInterface as ObserverI;
 use Rx\Observable\ArrayObservable;
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Psr7\Request;

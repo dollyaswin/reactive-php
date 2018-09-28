@@ -5,7 +5,6 @@ use Rx\Observable\ArrayObservable;
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Psr7\Request;
 
-// class JsonPlaceholderAlbum extends Observable
 class JsonPlaceholderAlbum extends ArrayObservable
 {
     /**
@@ -23,9 +22,8 @@ class JsonPlaceholderAlbum extends ArrayObservable
      */
     protected $httpClient;
 
-    public function __construct(HttpClient $httpClient = null, ?int $limit = null, ?string $url = null)
+    public function __construct(HttpClient $httpClient = null, ?string $url = null)
     {
-        $this->limit = $limit ?? 10;
         $this->url   = $url ?? 'https://jsonplaceholder.typicode.com/albums';
         $this->httpClient = $httpClient;
         $data  = $this->getAlbumJson();

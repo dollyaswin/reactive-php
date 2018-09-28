@@ -11,13 +11,12 @@ use RxExample\Observer\PrintValue;
 $client = new \GuzzleHttp\Client();
 $album  = null;
 try {
-	$album  = new JsonPlaceholderAlbumObservable($client);
-	$album->take(3)
-	      ->lift(function () {
-	     		return new JsonPlaceholderAlbumOperator();
-	      })
-	      ->distinct()
-	      ->subscribe(new JsonPlaceholderAlbumObserver);
+    $album  = new JsonPlaceholderAlbumObservable($client);
+    $album->take(20)
+          ->lift(function () {
+                return new JsonPlaceholderAlbumOperator();
+          })
+          ->subscribe(new JsonPlaceholderAlbumObserver);
 } catch (\RuntimeException $e) {
-	echo $e->getMessage(), PHP_EOL;
+    echo $e->getMessage(), PHP_EOL;
 }
